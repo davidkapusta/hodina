@@ -1,10 +1,11 @@
-﻿Console.WriteLine("Vitajte v hre Rytieri a Draci!");
-VypisMenu();
+﻿Console.Write("Zadaj svoje meno: ");
+string meno = Console.ReadLine();
+PrivitajPouzivatela(meno);
 Console.ReadKey();
 
 
-void VypisMenu()
+void PrivitajPouzivatela(string meno)
 {
-    Console.WriteLine("Zadaj prikaz (novahra/nacitat/koniec): ");
+    Console.WriteLine($"Ahoj {meno} ,sme radi, že si späť!" );
 }
 
