@@ -1,32 +1,15 @@
-﻿while (true)
-{
-    Console.Write("Zadaj vek návštevníka: ");
-    string? vstup = Console.ReadLine();
-    if (!int.TryParse(vstup, out int vek))
-    {
-        Console.WriteLine("\"" + vstup + "\" nie je platné číslo");
-        continue;
-    }
-    bool mozeVstupit = JePlnolety(vek);
-    if (mozeVstupit)
-    {
-        Console.WriteLine("Vstup povolený.");
-    }
-    else
-    {
-        Console.WriteLine("Vstup zakázaný. Si príliš mladý.");
-    }
-}
+﻿Console.Write("Cena tovaru: ");
+double cena = int.Parse(Console.ReadLine());
+Console.Write("Zľavový kupón: ");
+double kupon = int.Parse(Console.ReadLine());
 
-Boolean JePlnolety(int vek)
-{
-    if (vek >= 18)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+double finalnaCena = VypocitajCenuPoZlave(cena, kupon);
 
+Console.WriteLine($"Pôvodná cena: {cena} EUR");
+Console.WriteLine($"Cena po zľave: {finalnaCena} EUR");
+Console.ReadKey();
+
+double VypocitajCenuPoZlave(double povodnaCena, double ZlavaVEurovach)
+{
+    Console.WriteLine();
+} 
